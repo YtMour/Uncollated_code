@@ -6,8 +6,9 @@ import "./css/index.css";
 import "./css/quanju.css";
 import "./js/h5.js";
 
+
 let btn=document.querySelector('.btn-alert')
-//获得弹窗
+//获得弹窗信息
 let alertEl=document.querySelector('.alert')
 
 btn.onclick=function(){
