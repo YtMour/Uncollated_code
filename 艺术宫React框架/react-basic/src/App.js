@@ -6,14 +6,14 @@ import "./css/index.css";
 import "./css/quanju.css";
 import "./js/h5.js";
 
+
 function App() {
   return (
     <>
-
-
+      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
       <div className="os">
         <div className="overall_situation">
-          <img src={require('./img/640.jpg')} className="shou1" /> 
+          <img src={require("./img/640.jpg")} className="shou1" />
           <div className="color_jb" />
         </div>
         {/*  */}
@@ -73,20 +73,52 @@ function App() {
                 <tr>
                   <td>
                     <div className="P-left">
-
-                      <button>
-                        <img src={require('./img/28晚钟.jpg')} className="img1" />
+                      <button className="btn-alert">
+                        <img
+                          src={require("./img/28晚钟.jpg")}
+                          className="img1"
+                        />
                       </button>
                       <p className="left-txt1">静物</p>
                       <p className="left-txt2">林风眠</p>
-                      
                     </div>
+                    {/* 内部弹窗 */}
+                    <div className="alert">
+                      <div className="alert-body">
+                        <div className="alert-title" >
+                          <img
+                            src={require("./img/28晚钟.jpg")}
+                            className="tan1"
+                          />
+                          <div className="close">x</div>
+                        </div>
+                        <div className="alert-content">弹窗内容    弹窗内容</div>
+                        <div className="tantxt1">舞</div>
+                        {/* 介绍 */}
+                        <table>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <td></td>
+                          <td></td>
+                        </table>
+                        {/* 内容 */}
+                        <div>
+
+                        </div>
+                      </div>
+                    </div>
+                    {/*  */}
+                   
+                      
+                    {/*  */}
                   </td>
                   <td>
                     <div className="P-right">
                       <button>
                         {" "}
-                        <img src={require('./img/1舞.jpg')} className="img1" />
+                        <img src={require("./img/1舞.jpg")} className="img1" />
                       </button>
                       <p className="left-txt1">敦煌仕女</p>
                       <p className="left-txt2">林风眠</p>
@@ -98,7 +130,10 @@ function App() {
                   <td>
                     <div className="P-left2">
                       <button>
-                        <img src={require('./img/2捧白莲红衣仕女 .jpg')} className="img1" />
+                        <img
+                          src={require("./img/2捧白莲红衣仕女 .jpg")}
+                          className="img1"
+                        />
                       </button>
                       <p className="left-txt1">仕女</p>
                       <p className="left-txt2">林风眠</p>
@@ -108,7 +143,10 @@ function App() {
                     <div className="P-right2">
                       <button>
                         {" "}
-                        <img src={require('./img/3黄河.jpg')} className="img1" />
+                        <img
+                          src={require("./img/3黄河.jpg")}
+                          className="img1"
+                        />
                       </button>
                       <p className="left-txt1">黄河</p>
                       <p className="left-txt2">吴冠中</p>
@@ -120,7 +158,10 @@ function App() {
                   <td>
                     <div className="P-left3">
                       <button>
-                        <img src={require('./img/4紫藤.jpg')} className="img1" />
+                        <img
+                          src={require("./img/4紫藤.jpg")}
+                          className="img1"
+                        />
                       </button>
                       <p className="left-txt1">仕女</p>
                       <p className="left-txt2">林风眠</p>
@@ -130,7 +171,10 @@ function App() {
                     <div className="P-right3">
                       <button>
                         {" "}
-                        <img src={require('./img/5蓝色花.jpg')} className="img1" />
+                        <img
+                          src={require("./img/5蓝色花.jpg")}
+                          className="img1"
+                        />
                       </button>
                       <p className="left-txt1">黄河</p>
                       <p className="left-txt2">吴冠中</p>
@@ -142,7 +186,10 @@ function App() {
                   <td>
                     <div className="P-left4">
                       <button>
-                        <img src={require('./img/6绣球花.jpg')} className="img1" />
+                        <img
+                          src={require("./img/6绣球花.jpg")}
+                          className="img1"
+                        />
                       </button>
                       <p className="left-txt1">仕女</p>
                       <p className="left-txt2">林风眠</p>
@@ -152,7 +199,10 @@ function App() {
                     <div className="P-right4">
                       <button>
                         {" "}
-                        <img src={require('./img/7仕女.jpg')} className="img1" />
+                        <img
+                          src={require("./img/7仕女.jpg")}
+                          className="img1"
+                        />
                       </button>
                       <p className="left-txt1">黄河</p>
                       <p className="left-txt2">吴冠中</p>

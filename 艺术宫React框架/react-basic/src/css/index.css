@@ -498,3 +498,107 @@ body {
   margin: auto;
   top: 0.45rem;
 }
+
+/* 弹窗部分 */
+.btn-alert {
+  display: block;
+  /* width: 400px; */
+  /* height: 100px; */
+  /* line-height: 100px; */
+  /* background-color: #fff; */
+  /* border-radius: 10px; */
+  /* color: #000; */
+  /* font-size: 40px; */
+  /* margin: 20px auto 0; */
+  border: none;
+  cursor: pointer;
+  /* letter-spacing: 5px; */
+  /* box-shadow: 0 0 5px #fff; */
+}
+/* 遮罩层 */
+.alert {
+  /* display: none; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  /* margin: auto; */
+  top: 0rem;
+  left: 0rem;
+}
+.alert-body {
+  width: 7.5rem;
+  height: 100vh;
+  background-color: #fff;
+  /* border-radius: 10px; */
+  font-size: 0.3rem;
+  /* color: #000; */
+  /* text-align: center; */
+  position: relative;
+  margin: 0 auto;
+  /* animation: moveFromBottom .3s linear;      */
+}
+.alert-title {
+  width: 7.5rem;
+  height: 8rem;
+  /* line-height: 1rem; */
+  /* border-bottom: 2px solid #eee; */
+  font-size: 0.4rem;
+  position: relative;
+}
+.close {
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  cursor: pointer;
+}
+.close:hover {
+  color: red;
+}
+.alert-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  color: #999;
+}
+
+.tan1 {
+  /* Rectangle 16 */
+
+  position: absolute;
+  width: 4.49rem;
+  height: 7.98rem;
+  left: 0.855rem;
+  top: 0.1rem;
+
+  /* background: url(2敦煌仕女.jpg); */
+}
+/* 文字 */
+.tantxt {
+  /* 敦煌仕女 */
+
+  /* width: 1.44rem; */
+  /* height: 0.5rem; */
+
+  /* font-family: 'PingFang SC'; */
+  /* font-style: normal; */
+  /* font-weight: 500; */
+  /* font-size: 0.36rem; */
+  /* line-height: 0.5rem; */
+
+  color: #000000;
+  /* position: relative; */
+  /* margin: auto; */
+  /* display: flex; */
+  /* top:1rem; */
+  /* Inside auto layout */
+  /* flex: none; */
+  /* order: 0; */
+  /* flex-grow: 0; */
+}
