@@ -6,30 +6,30 @@ import "./css/index.css";
 import "./css/quanju.css";
 import "./js/h5.js";
 
- let btn=document.querySelector('.btn-alert')
-        //获得弹窗
-        let alertEl=document.querySelector('.alert')
+let btn=document.querySelector('.btn-alert')
+//获得弹窗
+let alertEl=document.querySelector('.alert')
 
-        btn.onclick=function(){
-            alertEl.style.display='flex'
-        }
-        //获得关闭按钮
-        let btnClose=document.querySelector('.close')
+btn.onclick=function(){
+    alertEl.style.display='flex'
+}
+//获得关闭按钮
+let btnClose=document.querySelector('.close')
 
-        btnClose.onclick=function(){
-            alertEl.style.display='none'
-        }
+btnClose.onclick=function(){
+    alertEl.style.display='none'
+}
 
-        alertEl.onclick=function(e){
-            console.log(e)
-            if(e.target==alertEl){
-                alertEl.style.display='none'
-            }
-            
-        }
-
+alertEl.onclick=function(e){
+    console.log(e)
+    if(e.target==alertEl){
+        alertEl.style.display='none'
+    }
+    
+}
 function App() {
   return (
+    
     <>
       <meta name="viewport" content="width=device-width,initial-scale=1.0" />
       <div className="os">
