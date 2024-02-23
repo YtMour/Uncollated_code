@@ -8,9 +8,7 @@ import "./js/h5.js";
 
 function App() {
  
-  function Btnalert() {
-    
-  }
+
        let btn=document.querySelector('.Btnalert')
        
         let alertEl=document.querySelector('.alert')
