@@ -502,24 +502,12 @@ body {
 /* 弹窗部分 */
 .btn-alert {
   display: block;
-  /* width: 400px; */
-  /* height: 100px; */
-  /* line-height: 100px; */
-  /* background-color: #fff; */
-  /* border-radius: 10px; */
-  /* color: #000; */
-  /* font-size: 40px; */
-  /* margin: 20px auto 0; */
   border: none;
   cursor: pointer;
-  /* letter-spacing: 5px; */
-  /* box-shadow: 0 0 5px #fff; */
 }
 /* 遮罩层 */
 .alert {
-  /* display: none; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
@@ -532,19 +520,14 @@ body {
   width: 7.5rem;
   height: 100vh;
   background-color: #fff;
-  /* border-radius: 10px; */
   font-size: 0.3rem;
-  /* color: #000; */
   /* text-align: center; */
   position: relative;
   margin: 0 auto;
-  /* animation: moveFromBottom .3s linear;      */
 }
 .alert-title {
   width: 7.5rem;
   height: 8rem;
-  /* line-height: 1rem; */
-  /* border-bottom: 2px solid #eee; */
   font-size: 0.4rem;
   position: relative;
 }
@@ -569,15 +552,12 @@ body {
 }
 
 .tan1 {
-  /* Rectangle 16 */
 
   position: absolute;
   width: 4.49rem;
   height: 7.98rem;
   left: 0.855rem;
   top: 0.1rem;
-
-  /* background: url(2敦煌仕女.jpg); */
 }
 /* 文字 */
 .tantxt {

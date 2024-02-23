@@ -6,31 +6,34 @@ import "./css/index.css";
 import "./css/quanju.css";
 import "./js/h5.js";
 
-
-let btn=document.querySelector('.btn-alert')
-//获得弹窗信息
-let alertEl=document.querySelector('.alert')
-
-btn.onclick=function(){
-    alertEl.style.display='flex'
-}
-//获得关闭按钮
-let btnClose=document.querySelector('.close')
-
-btnClose.onclick=function(){
-    alertEl.style.display='none'
-}
-
-alertEl.onclick=function(e){
-    console.log(e)
-    if(e.target==alertEl){
-        alertEl.style.display='none'
-    }
-    
-}
 function App() {
-  return (
+ 
+  function Btnalert() {
     
+  }
+       let btn=document.querySelector('.Btnalert')
+       
+        let alertEl=document.querySelector('.alert')
+
+        btn.onclick=function(){
+            alertEl.style.display='flex'
+        }
+       
+        let btnClose=document.querySelector('.Close')
+
+        btnClose.onclick=function(){
+            alertEl.style.display='none'
+        }
+
+        alertEl.onclick=function(e){
+            console.log(e)
+            if(e.target==alertEl){
+                alertEl.style.display='none'
+            }
+            
+        }
+
+  return (
     <>
       <meta name="viewport" content="width=device-width,initial-scale=1.0" />
       <div className="os">
@@ -95,7 +98,7 @@ function App() {
                 <tr>
                   <td>
                     <div className="P-left">
-                      <button className="btn-alert">
+                      <button className="btn-alert" onclick={Btnalert}>
                         <img
                           src={require("./img/28晚钟.jpg")}
                           className="img1"
@@ -107,14 +110,14 @@ function App() {
                     {/* 内部弹窗 */}
                     <div className="alert">
                       <div className="alert-body">
-                        <div className="alert-title" >
+                        <div className="alert-title">
                           <img
                             src={require("./img/28晚钟.jpg")}
                             className="tan1"
                           />
                           <div className="close">x</div>
                         </div>
-                        <div className="alert-content">弹窗内容    弹窗内容</div>
+                        <div className="alert-content">弹窗内容 弹窗内容</div>
                         <div className="tantxt1">舞</div>
                         {/* 介绍 */}
                         <table>
@@ -126,14 +129,11 @@ function App() {
                           <td></td>
                         </table>
                         {/* 内容 */}
-                        <div>
-
-                        </div>
+                        <div></div>
                       </div>
                     </div>
                     {/*  */}
-                   
-                      
+
                     {/*  */}
                   </td>
                   <td>
