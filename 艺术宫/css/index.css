@@ -255,10 +255,10 @@ body {
 
   color: #000000;
 
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+  /* flex: none; */
+  /* order: 0; */
+  /* align-self: stretch; */
+  /* flex-grow: 0; */
   position: relative;
   top: 0.25rem;
   left: 0.15rem;
@@ -498,3 +498,190 @@ body {
   margin: auto;
   top: 0.45rem;
 }
+
+/* 弹窗部分 */
+
+/* 设置弹窗可滑动 */
+body.lock-scroll {
+  overflow: hidden;
+}
+
+.alert-ctt {
+  overflow-x: hidden; /* 禁用横向滑动条 */
+  /* height: 9rem; 窗口高度 */
+  max-height: 100rem; /* 根据需求调整高度 */
+  overflow-y: auto;
+  max-height: calc(
+    100vh - 100px
+  ); /* 让内容区域高度等于视窗高度减去一定值（例如100px为顶部和底部留出空间） */
+}
+@media (max-width: 750px) {
+  .alert-ctt {
+    max-height: calc(100vh - 70px);
+  }
+}
+/*  */
+.btn-alert {
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+
+/* 或者只针对某个元素 进行隐藏滑动条 */
+.alert-ctt::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/* 遮罩层 */
+.alert {
+  display: none;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  /* margin: auto; */
+  top: 0rem;
+  left: 0rem;
+}
+.alert-body {
+  z-index: 1;
+  width: 7.5rem;
+  height: 100vh;
+  background-color: #fff;
+  /* background-color: #7acae2; */
+  font-size: 0.3rem;
+  /* text-align: center; */
+  position: relative;
+  margin: 0 auto;
+}
+.alert-title {
+  width: 7.5rem;
+  height: 8rem;
+  font-size: 0.4rem;
+  position: relative;
+}
+.close {
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  cursor: pointer;
+}
+.close:hover {
+  color: red;
+}
+/* .alert-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  color: #999;
+} */
+
+.tan1 {
+  position: relative;
+
+  /* width: 4.49rem;
+  height: 7.98rem;
+  left: 1.5rem;
+  top: 0.1rem; */
+
+  width: 4.49rem;
+  height: 7.97rem;
+  left: 1.5rem;
+  top: 0.15rem;
+  object-fit: cover;
+  flex: 1;
+}
+/* 文字 */
+.tantxt1 {
+  /* 敦煌仕女 */
+
+  width: 1.44rem;
+  height: 0.5rem;
+
+  /* font-family: 'PingFang SC'; */
+  /* font-style: normal; */
+  /* font-weight: 500; */
+  font-size: 0.36rem;
+  /* line-height: 0.5rem; */
+
+  color: #000000;
+  position: relative;
+  margin: auto;
+
+  /* display: flex; */
+  top: 0.5rem;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  /* flex-grow: 0; */
+}
+/* 敦煌仕女 */
+
+.dbdiv {
+  padding: 0px;
+
+  width: 5.6rem;
+  height: 1.28rem;
+  top: 0.8rem;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  position: relative;
+  margin: auto;
+}
+
+.dbtxt {
+  /* 作者：林风眠 */
+
+  width: 2rem;
+  height: 0.56rem;
+
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.3rem;
+  line-height: 0.56rem;
+  /* identical to box height, or 187% */
+
+  color: #4f4f4f;
+
+  position: relative;
+  margin: auto;
+
+  /* Inside auto layout */
+  /* flex: none; */
+  /* order: 0;
+flex-grow: 0; */
+}
+.dbtxtc2 {
+  /* 林风眠的所有作品中，以“敦煌”题材最为稀见，而出自20世纪50年代更显金贵。林风眠极推崇敦煌艺术。1952年更直言敦煌石窟的壁画是东方最好的美术品，更是许多欧洲大画家理想中所追求而没有得到的境界。“其两线之间的平涂，中间色的度数，几乎是人手不能画成”。而这不可能的任务，经过他反复探索，最终达成登峰造极的高度。此画表现两位女子，一位坐而抚琴，另一位闻声起舞，不见明显勾线，而采用色彩平涂方式，颜色以青绿冷色调为主，以赭色涂面，领口袖口涂白，色彩层次和谐而丰富。 */
+
+  width: 6.2rem;
+  height: 6.72rem;
+
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.3rem;
+  line-height: 0.56rem;
+  /* or 187% */
+  top: 1.2rem;
+  margin: auto;
+  position: relative;
+  color: #4f4f4f;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+/* .kongdiv {
+  height: 5rem;
+} */

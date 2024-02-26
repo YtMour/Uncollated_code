@@ -1,0 +1,713 @@
+html {
+  font-size: 100px;
+}
+#root {
+  font-size: 1rem; /* 100px */
+}
+.os {
+  margin: 0 auto;
+  /* width: 7.5rem; */
+  /* height: 42.81rem; */
+  background-color: #f5f8fa;
+}
+body {
+  /* width: 100vw; */
+  background-color: rgb(189, 240, 174);
+  margin: 0px;
+}
+.overall_situation {
+  /* width: 7.5rem;
+  height: 50rem;
+  background-color: rgb(255, 255, 255); */
+  position: relative;
+  /* text-align: center; */
+  /* margin: auto; */
+  /* margin-top:0px; */
+}
+.shou1 {
+  /* width: 100vw; */
+  /* width: 7.5rem; */
+  /* height: 5rem; */
+}
+/* .color_jb { */
+/* width: 100%; */
+/* width: 7.5rem; */
+/* height: 2.65rem; */
+/* background: linear-gradient(#b81c22, #f5f8fa); */
+/* position: relative; */
+/* } */
+/* 信息 */
+.information {
+  /* Frame 19 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 16px 30px 20px;
+  gap: 20px;
+
+  position: absolute;
+  width: 3.5rem;
+  height: 2.82rem;
+  left: 565px;
+  top: 572px;
+
+  background: #ffffff;
+}
+/* 展览信息 */
+.txt_max {
+  /* 展览信息 */
+
+  width: 3.14rem;
+  height: 0.22rem;
+
+  font-family: "Songti SC";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.18rem;
+  line-height: 0.22rem;
+  /* identical to box height, or 122% */
+  text-align: center;
+
+  color: #b81c22;
+
+  position: relative;
+  margin: auto;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.tb1 {
+  /* 展览地址： */
+  /* Frame 19 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 3.14rem;
+  height: 1.8rem;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  position: relative;
+  margin: auto;
+  top: -0.2rem;
+}
+.txt-1 {
+  /* 展览地址： */
+
+  width: 0.6rem;
+  height: 0.18rem;
+
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.12rem;
+  line-height: 0.18rem;
+  /* identical to box height, or 150% */
+  padding: 0.12rem;
+  color: #000000;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  position: relative;
+  font-weight: bold;
+}
+
+.txt1-2 {
+  /* 上海市浦东新区上南路205号 中华艺术宫（上海美术馆） */
+  /* 上海市浦东新区上南路205号 中华艺术宫（上海美术馆） */
+
+  width: 2.35rem;
+  height: 0.36rem;
+
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.12rem;
+  line-height: 0.18rem;
+  /* or 150% */
+
+  color: #4f4f4f;
+  padding: 0.08rem;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  position: relative;
+  margin: auto;
+}
+
+/* 介绍 */
+.introduce {
+  /* margin-top: 0px; */
+  height: 7.65rem;
+  width: 7rem;
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+  top: -1.85rem;
+}
+.txt-introduce {
+  /* 今年是中法建交60周年，也是中法文化旅游年，因此上海市文化和旅游局指导中华艺术宫（上海美术馆）联手清华大学艺术博物馆、中国上海画院、上海市美术家协会，策划了林风眠、吴冠中艺术大展，以“中国式风景”为主题，遴选了两位艺术家大约200幅佳作，涵盖他们在不同时期创作的中国画、油画、水彩、素描各门类艺术精品，展现他们师生二人融通中西古今的开放视野，传统精髓与时代经验兼备的中国气派。我们真诚欢迎更多市民游客走进上海美术馆，沉浸式体验“中国式风景”，从中华文化和中华美学中得到心灵的滋养、汲取奋进的力量。 */
+
+  width: 6.2rem;
+  height: 5.52rem;
+
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.28rem;
+  line-height: 0.46rem;
+  /* or 164% */
+  text-align: justify;
+
+  color: #4f4f4f;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: auto;
+}
+/* 重要作品介绍 */
+.blanktxt {
+  position: relative;
+  top: -1.65rem;
+}
+.P-txt {
+  /* Frame 10 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0rem;
+  /* gap: 0.4rem; */
+
+  width: 7rem;
+  height: 20.16rem;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  position: relative;
+  top: -1.6rem;
+  margin: auto;
+  /* background-color: blue; */
+}
+
+.P-left {
+  /* Frame 3 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.1rem 0.1rem 0rem;
+
+  width: 3.2rem;
+  height: 4.74rem;
+
+  background: #ffffff;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  margin: auto;
+  position: relative;
+}
+/* Frame 8 */
+
+/* Auto layout */
+.P-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.1rem 0.1rem 0rem;
+
+  width: 3.2rem;
+  height: 4.74rem;
+
+  background: #ffffff;
+
+  left: 0.2rem;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: auto;
+  position: relative;
+}
+
+/* 图片 */
+.img1 {
+  /* Rectangle 16 */
+
+  width: 3.2rem;
+  height: 3.2rem;
+
+  /* background: url(1静物.jpg); */
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.left-txt1 {
+  /* 画作名称 */
+
+  width: 2.8rem;
+  height: 0.42rem;
+
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.3rem;
+  line-height: 0.42rem;
+  /* identical to box height */
+
+  color: #000000;
+
+  /* flex: none; */
+  /* order: 0; */
+  /* align-self: stretch; */
+  /* flex-grow: 0; */
+  position: relative;
+  top: 0.25rem;
+  left: 0.15rem;
+}
+.left-txt2 {
+  width: 0.78rem;
+  height: 0.36rem;
+
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.26rem;
+  line-height: 0.36rem;
+
+  color: #4f4f4f;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  position: relative;
+  top: 0.45rem;
+  left: 0.15rem;
+}
+
+.img2 {
+  /* Rectangle 16 */
+
+  width: 3.2rem;
+  height: 3.2rem;
+
+  /* background: url(/艺术宫/img/1舞.jpg); */
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+/* 第二 */
+
+.P-left2 {
+  /* Frame 3 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.1rem 0.1rem 0rem;
+
+  width: 3.2rem;
+  height: 4.74rem;
+
+  background: #ffffff;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  margin: auto;
+  position: relative;
+  top: 0.4rem;
+}
+/* Frame 8 */
+
+/* Auto layout */
+.P-right2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.1rem 0.1rem 0rem;
+
+  width: 3.2rem;
+  height: 4.74rem;
+
+  background: #ffffff;
+
+  left: 0.2rem;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: auto;
+  position: relative;
+  top: 0.4rem;
+}
+
+/* 三 */
+
+.P-left3 {
+  /* Frame 3 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.1rem 0.1rem 0rem;
+
+  width: 3.2rem;
+  height: 4.74rem;
+
+  background: #ffffff;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  margin: auto;
+  position: relative;
+  top: 0.8rem;
+}
+/* Frame 8 */
+
+/* Auto layout */
+.P-right3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.1rem 0.1rem 0rem;
+
+  width: 3.2rem;
+  height: 4.74rem;
+
+  background: #ffffff;
+
+  left: 0.2rem;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: auto;
+  position: relative;
+  top: 0.8rem;
+}
+/* 四 */
+
+.P-left4 {
+  /* Frame 3 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.1rem 0.1rem 0rem;
+
+  width: 3.2rem;
+  height: 4.74rem;
+
+  background: #ffffff;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  margin: auto;
+  position: relative;
+  top: 1.2rem;
+}
+/* Frame 8 */
+
+/* Auto layout */
+.P-right4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.1rem 0.1rem 0rem;
+
+  width: 3.2rem;
+  height: 4.74rem;
+
+  background: #ffffff;
+
+  left: 0.2rem;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: auto;
+  position: relative;
+  top: 1.2rem;
+}
+
+.bottom {
+  /* Vector */
+
+  position: relative;
+  width: 7.5rem;
+  height: 1.37rem;
+  left: 0px;
+  /* top: 25.6rem; */
+
+  background: #ebeef0;
+}
+.bt1 {
+  /* 中国式风景 */
+
+  position: relative;
+  width: 2.09rem;
+  height: 0.44rem;
+  /* left: 2.71rem; */
+  /* top: 4550px; */
+
+  font-family: "Songti SC";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.36rem;
+  line-height: 0.44rem;
+  /* identical to box height, or 122% */
+  /* text-align: center; */
+  letter-spacing: 0.032rem;
+
+  color: #b81c22;
+  margin: auto;
+  top: 0.35rem;
+}
+.bt2 {
+  /* 林风眠吴冠中艺术大展 */
+
+  position: relative;
+  width: 2.03rem;
+  height: 0.32rem;
+  /* left: 274px; */
+  /* top: 4600px; */
+
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.18rem;
+  line-height: 0.32rem;
+  /* identical to box height, or 178% */
+  text-align: center;
+  letter-spacing: 0.0224rem;
+
+  color: #9a9a9a;
+  margin: auto;
+  top: 0.45rem;
+}
+
+/* 弹窗部分 */
+
+/* 设置弹窗可滑动 */
+body.lock-scroll {
+  overflow: hidden;
+}
+
+.alert-ctt {
+  overflow-x: hidden; /* 禁用横向滑动条 */
+  /* height: 9rem; 窗口高度 */
+  max-height: 100rem; /* 根据需求调整高度 */
+  overflow-y: auto;
+  max-height: calc(
+    100vh - 100px
+  ); /* 让内容区域高度等于视窗高度减去一定值（例如100px为顶部和底部留出空间） */
+}
+@media (max-width: 750px) {
+  .alert-ctt {
+    max-height: calc(100vh - 70px);
+  }
+}
+/*  */
+.btn-alert {
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+
+/* 或者只针对某个元素 进行隐藏滑动条 */
+.alert-ctt::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/* 遮罩层 */
+.alert {
+  display: none;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  /* margin: auto; */
+  top: 0rem;
+  left: 0rem;
+}
+.alert-body {
+  z-index: 1;
+  width: 7.5rem;
+  height: 100vh;
+  background-color: #fff;
+  /* background-color: #7acae2; */
+  font-size: 0.3rem;
+  /* text-align: center; */
+  position: relative;
+  margin: 0 auto;
+}
+.alert-title {
+  width: 7.5rem;
+  height: 8rem;
+  font-size: 0.4rem;
+  position: relative;
+}
+.close {
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  cursor: pointer;
+}
+.close:hover {
+  color: red;
+}
+/* .alert-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  color: #999;
+} */
+
+.tan1 {
+  position: relative;
+
+  /* width: 4.49rem;
+  height: 7.98rem;
+  left: 1.5rem;
+  top: 0.1rem; */
+
+  width: 4.49rem;
+  height: 7.97rem;
+  left: 1.5rem;
+  top: 0.15rem;
+  object-fit: cover;
+  flex: 1;
+}
+/* 文字 */
+.tantxt1 {
+  /* 敦煌仕女 */
+
+  width: 1.44rem;
+  height: 0.5rem;
+
+  /* font-family: 'PingFang SC'; */
+  /* font-style: normal; */
+  /* font-weight: 500; */
+  font-size: 0.36rem;
+  /* line-height: 0.5rem; */
+
+  color: #000000;
+  position: relative;
+  margin: auto;
+
+  /* display: flex; */
+  top: 0.5rem;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  /* flex-grow: 0; */
+}
+/* 敦煌仕女 */
+
+.dbdiv {
+  padding: 0px;
+
+  width: 5.6rem;
+  height: 1.28rem;
+  top: 0.8rem;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  position: relative;
+  margin: auto;
+}
+
+.dbtxt {
+  /* 作者：林风眠 */
+
+  width: 2rem;
+  height: 0.56rem;
+
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.3rem;
+  line-height: 0.56rem;
+  /* identical to box height, or 187% */
+
+  color: #4f4f4f;
+
+  position: relative;
+  margin: auto;
+
+  /* Inside auto layout */
+  /* flex: none; */
+  /* order: 0;
+flex-grow: 0; */
+}
+.dbtxtc2 {
+  /* 林风眠的所有作品中，以“敦煌”题材最为稀见，而出自20世纪50年代更显金贵。林风眠极推崇敦煌艺术。1952年更直言敦煌石窟的壁画是东方最好的美术品，更是许多欧洲大画家理想中所追求而没有得到的境界。“其两线之间的平涂，中间色的度数，几乎是人手不能画成”。而这不可能的任务，经过他反复探索，最终达成登峰造极的高度。此画表现两位女子，一位坐而抚琴，另一位闻声起舞，不见明显勾线，而采用色彩平涂方式，颜色以青绿冷色调为主，以赭色涂面，领口袖口涂白，色彩层次和谐而丰富。 */
+
+  width: 6.2rem;
+  height: 6.72rem;
+
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.3rem;
+  line-height: 0.56rem;
+  /* or 187% */
+  top: 1.2rem;
+  margin: auto;
+  position: relative;
+  color: #4f4f4f;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+/* .kongdiv {
+  height: 5rem;
+} */
