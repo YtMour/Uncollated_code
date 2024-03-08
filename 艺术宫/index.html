@@ -826,9 +826,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // 遍历所有的按钮，并为每个按钮添加点击事件监听器
     btns.forEach((btn, index) => {
         btn.onclick = function() {
+            // 隐藏所有弹窗
+            alerts.forEach(alert => {
+                alert.style.display = 'none';
+            });
+            // 显示当前点击的弹窗
             alerts[index].style.display = 'flex';
             bodyEl.classList.add('lock-scroll');
-            // 显示关闭按钮
+            // 显示当前点击的弹窗的关闭按钮
             closeButtons[index].style.display = 'block';
         }
     });
@@ -836,9 +841,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // 遍历所有的关闭按钮，并为每个按钮添加点击事件监听器
     closeButtons.forEach((closeButton, index) => {
         closeButton.onclick = function() {
+            // 隐藏当前点击的弹窗
             alerts[index].style.display = 'none';
             bodyEl.classList.remove('lock-scroll');
-            // 隐藏关闭按钮
+            // 隐藏当前点击的关闭按钮
             closeButton.style.display = 'none';
         }
     });
@@ -849,15 +855,18 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentScroll > lastScrollTop) {
             // Scrolling down
             closeButtons.forEach(closeButton => {
-                closeButton.style.display = 'none'; // 向下滑动时隐藏关闭按钮
+                closeButton.style.display = 'none'; // 向下滑动时隐藏所有关闭按钮
             });
         } else {
             // Scrolling up
-            closeButtons.forEach(closeButton => {
-                closeButton.style.display = 'block'; // 向上滑动时显示关闭按钮
+            closeButtons.forEach((closeButton, index) => {
+                // 如果弹窗显示并且不是当前点击的弹窗，则显示关闭按钮
+                if (alerts[index].style.display === 'flex') {
+                    closeButton.style.display = 'block';
+                }
             });
         }
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        lastScrollTop = currentScroll;
     });
 });
 
