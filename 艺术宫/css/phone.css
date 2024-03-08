@@ -523,7 +523,7 @@ body.lock-scroll {
 /*  */
 .btn-alert {
   display: block;
-  border: none;
+  /* border: none; */
   cursor: pointer;
 }
 
@@ -585,6 +585,7 @@ body.lock-scroll {
   color: #ffffff;
   margin: auto;
   bottom: 1.5rem;
+  display: block;
 }
 .colsetxt {
   font-size:20px;

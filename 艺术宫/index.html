@@ -15,7 +15,65 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
 </head>
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function() {
+    let btns = document.querySelectorAll('.btn-alert');
+    let alerts = document.querySelectorAll('.alert');
+    let bodyEl = document.body;
+    let closeButtons = document.querySelectorAll('.close');
+    let fullscreenTriggers = document.querySelectorAll('.fullscreen-trigger');
+    let fullscreenContainers = document.querySelectorAll('.fullscreen-container');
+    let lastScrollTop = 0;
 
+    // 遍历所有的按钮，并为每个按钮添加点击事件监听器
+    btns.forEach((btn, index) => {
+        btn.onclick = function() {
+            alerts[index].style.display = 'flex';
+            bodyEl.classList.add('lock-scroll');
+        }
+    });
+
+    // 遍历所有的关闭按钮，并为每个按钮添加点击事件监听器
+    closeButtons.forEach((closeButton, index) => {
+        closeButton.onclick = function() {
+            alerts[index].style.display = 'none';
+            bodyEl.classList.remove('lock-scroll');
+        }
+    });
+
+    // 遍历所有的全屏触发按钮，并为每个按钮添加点击事件监听器
+    fullscreenTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            const targetId = trigger.getAttribute('data-target');
+            const targetContainer = document.getElementById(targetId);
+            if (targetContainer) {
+                targetContainer.classList.add('fullscreen-active');
+                closeButtons.forEach(closeButton => {
+                    closeButton.style.display = 'block';
+                });
+            }
+        });
+    });
+
+    // 添加滚动事件监听器
+    window.addEventListener('scroll', function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            closeButtons.forEach(closeButton => {
+                closeButton.style.display = 'none';
+            });
+        } else {
+            // Scrolling up
+            closeButtons.forEach(closeButton => {
+                closeButton.style.display = 'block';
+            });
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+});
+
+</script> -->
 <body>
   <div class="os">
     <div class="overall_situation">
@@ -81,7 +139,7 @@
                  <div class=" alert-ctt">
                   <div class="alert-title">
                     
-                    <img src="img/1舞.jpg" class="tan1"  />
+                    <img src="img/1舞.jpg" class="tan1 fullscreen-trigger" alt="Fullscreen Image 1" data-target="fullscreen-container1"/>
                     
                     <!-- <div class="tan1"></div> -->
                     <!-- <div class="close"><p class="colsetxt">x</p></div> -->
@@ -108,7 +166,7 @@
             </td>
             <td>
               <div class="P-right">
-                <button class="btn-alert2"> <img src="img/2捧白莲红衣仕女 .jpg" class="img1"></button>
+                <button class="btn-alert btn-alert2"> <img src="img/2捧白莲红衣仕女 .jpg" class="img1"></button>
                 <p class="left-txt1">捧白莲红衣仕女</p>
                 <p class="left-txt2">林风眠</p>
               </div>
@@ -117,7 +175,7 @@
                 <div class="alert-body alert-body2">
                  <div class="alert-ctt alert-ctt2">
                   <div class="alert-title alert-title2">            
-                    <img src="img/2捧白莲红衣仕女 .jpg" class="tan1 enlargeable-image"  />
+                    <img src="img/2捧白莲红衣仕女 .jpg" class="tan1 fullscreen-trigger" alt="Fullscreen Image 2" data-target="fullscreen-container2" />
                     <!-- <div class="close close2">x</div> -->
                   </div>
                   <div class="tantxt1">捧白莲红衣仕女</div>
@@ -143,7 +201,7 @@
           <tr>
             <td>
               <div class="P-left2">
-                <button class="btn-alert3"><img src="img/3黄河.jpg" class="img1"></button>
+                <button class="btn-alert btn-alert3"><img src="img/3黄河.jpg" class="img1"></button>
                 <p class="left-txt1">黄河</p>
                 <p class="left-txt2">吴冠中</p>
               </div>
@@ -151,7 +209,7 @@
                 <div class="alert-body alert-body3">
                  <div class="alert-ctt alert-ctt3">
                   <div class="alert-title alert-title3">            
-                    <img src="img/3黄河.jpg" class="tan1"  />
+                    <img src="img/3黄河.jpg" class="tan1 fullscreen-trigger" alt="Fullscreen Image 3" data-target="fullscreen-container3" />
                     <!-- <div class="close close3">x</div> -->
                   </div>
                   <div class="tantxt1">黄河</div>
@@ -172,7 +230,7 @@
             </td>
             <td>
               <div class="P-right2">
-                <button class="btn-alert4"> <img src="img/4紫藤.jpg" class="img1"></button>
+                <button class="btn-alert btn-alert4"> <img src="img/4紫藤.jpg" class="img1"></button>
                 <p class="left-txt1">紫藤</p>
                 <p class="left-txt2">吴冠中</p>
               </div>
@@ -180,7 +238,7 @@
                 <div class="alert-body alert-body4">
                  <div class="alert-ctt alert-ctt4">
                   <div class="alert-title alert-title4">            
-                    <img src="img/4紫藤.jpg" class="tan1"  />
+                    <img src="img/4紫藤.jpg" class="tan1 fullscreen-trigger" alt="Fullscreen Image 4" data-target="fullscreen-container4" />
                     <!-- <div class="close close4">x</div> -->
                   </div>
                   <div class="tantxt1">紫藤</div>
@@ -204,7 +262,7 @@
           <tr>
             <td>
               <div class="P-left3">
-                <button class="btn-alert5"><img src="img/5蓝色花.jpg" class="img1"></button>
+                <button class="btn-alert btn-alert5"><img src="img/5蓝色花.jpg" class="img1"></button>
                 <p class="left-txt1">蓝色花</p>
                 <p class="left-txt2">林风眠</p>
               </div>
@@ -213,7 +271,7 @@
                 <div class="alert-body alert-body5">
                  <div class="alert-ctt alert-ctt5">
                   <div class="alert-title alert-title5">            
-                    <img src="img/5蓝色花.jpg" class="tan1"  />
+                    <img src="img/5蓝色花.jpg" class="tan1 fullscreen-trigger" alt="Fullscreen Image 5" data-target="fullscreen-container5"  />
                     <!-- <div class="close close5">x</div> -->
                   </div>
                   <div class="tantxt1">蓝色花</div>
@@ -235,7 +293,7 @@
             </td>
             <td>
               <div class="P-right3">
-                <button class="btn-alert6"> <img src="img/6绣球花.jpg" class="img1"></button>
+                <button class="btn-alert btn-alert6"> <img src="img/6绣球花.jpg" class="img1"></button>
                 <p class="left-txt1">绣球花</p>
                 <p class="left-txt2">林风眠</p>
               </div>
@@ -244,7 +302,7 @@
                 <div class="alert-body alert-body6">
                  <div class="alert-ctt alert-ctt6">
                   <div class="alert-title alert-title6">            
-                    <img src="img/6绣球花.jpg" class="tan1"  />
+                    <img src="img/6绣球花.jpg" class="tan1 fullscreen-trigger" alt="Fullscreen Image 6" data-target="fullscreen-container6" />
                     <!-- <div class="close close6">x</div> -->
                   </div>
                   <div class="tantxt1">绣球花</div>
@@ -269,7 +327,7 @@
           <tr>
             <td>
               <div class="P-left4">
-                <button class="btn-alert7"><img src="img/7仕女.jpg" class="img1"></button>
+                <button class="btn-alert btn-alert7"><img src="img/7仕女.jpg" class="img1"></button>
                 <p class="left-txt1">仕女</p>
                 <p class="left-txt2">林风眠</p>
               </div>
@@ -278,7 +336,7 @@
                 <div class="alert-body alert-body7">
                  <div class="alert-ctt alert-ctt7">
                   <div class="alert-title alert-title7">            
-                    <img src="img/7仕女.jpg" class="tan1"  />
+                    <img src="img/7仕女.jpg" class="tan1 fullscreen-trigger" alt="Fullscreen Image 7" data-target="fullscreen-container7"  />
                     <!-- <div class="close close7">x</div> -->
                   </div>
                   <div class="tantxt1">仕女</div>
@@ -300,7 +358,7 @@
             </td>
             <td>
               <div class="P-right4">
-                <button class="btn-alert8"> <img src="img/8湖滨.jpg" class="img1"></button>
+                <button class="btn-alert btn-alert8"> <img src="img/8湖滨.jpg" class="img1"></button>
                 <p class="left-txt1">湖滨</p>
                 <p class="left-txt2">林风眠</p>
               </div>
@@ -309,7 +367,7 @@
                 <div class="alert-body alert-body8">
                  <div class="alert-ctt alert-ctt8">
                   <div class="alert-title alert-title8">            
-                    <img src="img/8湖滨.jpg" class="tan1"  />
+                    <img src="img/8湖滨.jpg" class="tan1 fullscreen-trigger" alt="Fullscreen Image 8" data-target="fullscreen-container8" />
                     <!-- <div class="close close8">x</div> -->
                   </div>
                   <div class="tantxt1">湖滨</div>
@@ -346,197 +404,207 @@
   <!--  -->
   <script src="js/h5.js"></script>
   <script>
-    let btn=document.querySelector('.btn-alert')
-    //获得弹窗
-    let alertEl=document.querySelector('.alert')
+//     document.addEventListener('DOMContentLoaded', function() {
+//     let btn=document.querySelector('.btn-alert')
+//     //获得弹窗
+//     let alertEl=document.querySelector('.alert')
 
-    let contentEl = document.querySelector('.alert-ctt');
-    let bodyEl = document.body;
+//     let contentEl = document.querySelector('.alert-ctt');
+//     let bodyEl = document.body;
 
-    btn.onclick=function(){
-        // alertEl.style.display='flex'
+//     btn.onclick=function(){
+//         // alertEl.style.display='flex'
 
-        alertEl.style.display = 'flex';
-      bodyEl.classList.add('lock-scroll'); // 当弹窗显示时锁定页面滚动
-    }
-    //获得关闭按钮
-    let btnClose=document.querySelector('.close')
+//         alertEl.style.display = 'flex';
+//       bodyEl.classList.add('lock-scroll'); // 当弹窗显示时锁定页面滚动
+//     }
+//     //获得关闭按钮
+//     let btnClose=document.querySelector('.close')
+//     let closeButton = document.querySelector('.close');
+//     btnClose.onclick=function(){
+//         // alertEl.style.display='none'
 
-    btnClose.onclick=function(){
-        // alertEl.style.display='none'
+//         alertEl.style.display = 'none';
+//       bodyEl.classList.remove('lock-scroll'); // 当关闭弹窗时解锁页面滚动
+//     }
 
-        alertEl.style.display = 'none';
-      bodyEl.classList.remove('lock-scroll'); // 当关闭弹窗时解锁页面滚动
-    }
+//     alertEl.onclick=function(e){
+//         console.log(e)
+//         if(e.target==alertEl){
+//             alertEl.style.display='none'
 
-    alertEl.onclick=function(e){
-        console.log(e)
-        if(e.target==alertEl){
-            alertEl.style.display='none'
+//             bodyEl.classList.remove('lock-scroll');
+//         }
 
-            bodyEl.classList.remove('lock-scroll');
-        }
-
-    }
+//     }
+//     window.addEventListener('scroll', function() {
+//     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+//     if (currentScroll > 50) {
+//       btnClose.style.display = 'block';
+//     } else {
+//       btnClose.style.display = 'none';
+//     }
+//   });
+// });
 // 第二
-    let btn2=document.querySelector('.btn-alert2')
-    //获得弹窗
-    let alertEl2=document.querySelector('.alert2')
-    let contentEl2 = document.querySelector('.alert-ctt2');
-    let bodyEl2 = document.body;
+    // let btn2=document.querySelector('.btn-alert2')
+    // //获得弹窗
+    // let alertEl2=document.querySelector('.alert2')
+    // let contentEl2 = document.querySelector('.alert-ctt2');
+    // let bodyEl2 = document.body;
 
-    btn2.onclick=function(){
-        alertEl2.style.display = 'flex';
-      bodyEl2.classList.add('lock-scroll'); // 当弹窗显示时锁定页面滚动
-    }
-    //获得关闭按钮
-    let btnClose2=document.querySelector('.close2')
+    // btn2.onclick=function(){
+    //     alertEl2.style.display = 'flex';
+    //   bodyEl2.classList.add('lock-scroll'); // 当弹窗显示时锁定页面滚动
+    // }
+    // //获得关闭按钮
+    // let btnClose2=document.querySelector('.close2')
 
-    btnClose2.onclick=function(){
-        alertEl2.style.display = 'none';
-      bodyEl2.classList.remove('lock-scroll'); // 当关闭弹窗时解锁页面滚动
-    }
+    // btnClose2.onclick=function(){
+    //     alertEl2.style.display = 'none';
+    //   bodyEl2.classList.remove('lock-scroll'); // 当关闭弹窗时解锁页面滚动
+    // }
 
-    alertEl2.onclick=function(e){
-        console.log(e)
-        if(e.target==alertEl2){
-            alertEl2.style.display='none'
-            bodyEl2.classList.remove('lock-scroll');
-        }
+    // alertEl2.onclick=function(e){
+    //     console.log(e)
+    //     if(e.target==alertEl2){
+    //         alertEl2.style.display='none'
+    //         bodyEl2.classList.remove('lock-scroll');
+    //     }
 
-    }
+    // }
 
-    let btn3=document.querySelector('.btn-alert3')
-    let alertEl3=document.querySelector('.alert3')
-    let contentEl3 = document.querySelector('.alert-ctt3');
-    let bodyEl3 = document.body;
-    btn3.onclick=function(){
-        alertEl3.style.display = 'flex';
-      bodyEl3.classList.add('lock-scroll');
-    }
-    let btnClose3=document.querySelector('.close3')
-    btnClose3.onclick=function(){
-        alertEl3.style.display = 'none';
-      bodyEl3.classList.remove('lock-scroll');
-    }
-    alertEl3.onclick=function(e){
-        console.log(e)
-        if(e.target==alertEl3){
-            alertEl3.style.display='none'
-            bodyEl3.classList.remove('lock-scroll');
-        }
+    // let btn3=document.querySelector('.btn-alert3')
+    // let alertEl3=document.querySelector('.alert3')
+    // let contentEl3 = document.querySelector('.alert-ctt3');
+    // let bodyEl3 = document.body;
+    // btn3.onclick=function(){
+    //     alertEl3.style.display = 'flex';
+    //   bodyEl3.classList.add('lock-scroll');
+    // }
+    // let btnClose3=document.querySelector('.close3')
+    // btnClose3.onclick=function(){
+    //     alertEl3.style.display = 'none';
+    //   bodyEl3.classList.remove('lock-scroll');
+    // }
+    // alertEl3.onclick=function(e){
+    //     console.log(e)
+    //     if(e.target==alertEl3){
+    //         alertEl3.style.display='none'
+    //         bodyEl3.classList.remove('lock-scroll');
+    //     }
 
-    }
+    // }
 
-    let btn4=document.querySelector('.btn-alert4')
-    let alertEl4=document.querySelector('.alert4')
-    let contentEl4 = document.querySelector('.alert-ctt4');
-    let bodyEl4 = document.body;
-    btn4.onclick=function(){
-        alertEl4.style.display = 'flex';
-      bodyEl4.classList.add('lock-scroll');
-    }
-    let btnClose4=document.querySelector('.close4')
-    btnClose4.onclick=function(){
-        alertEl4.style.display = 'none';
-      bodyEl4.classList.remove('lock-scroll');
-    }
-    alertEl4.onclick=function(e){
-        console.log(e)
-        if(e.target==alertEl4){
-            alertEl4.style.display='none'
-            bodyEl4.classList.remove('lock-scroll');
-        }
+    // let btn4=document.querySelector('.btn-alert4')
+    // let alertEl4=document.querySelector('.alert4')
+    // let contentEl4 = document.querySelector('.alert-ctt4');
+    // let bodyEl4 = document.body;
+    // btn4.onclick=function(){
+    //     alertEl4.style.display = 'flex';
+    //   bodyEl4.classList.add('lock-scroll');
+    // }
+    // let btnClose4=document.querySelector('.close4')
+    // btnClose4.onclick=function(){
+    //     alertEl4.style.display = 'none';
+    //   bodyEl4.classList.remove('lock-scroll');
+    // }
+    // alertEl4.onclick=function(e){
+    //     console.log(e)
+    //     if(e.target==alertEl4){
+    //         alertEl4.style.display='none'
+    //         bodyEl4.classList.remove('lock-scroll');
+    //     }
 
-    }
+    // }
 
-    let btn5=document.querySelector('.btn-alert5')
-    let alertEl5=document.querySelector('.alert5')
-    let contentEl5 = document.querySelector('.alert-ctt5');
-    let bodyEl5 = document.body;
-    btn5.onclick=function(){
-        alertEl5.style.display = 'flex';
-      bodyEl5.classList.add('lock-scroll');
-    }
-    let btnClose5=document.querySelector('.close5')
-    btnClose5.onclick=function(){
-        alertEl5.style.display = 'none';
-      bodyEl5.classList.remove('lock-scroll');
-    }
-    alertEl5.onclick=function(e){
-        console.log(e)
-        if(e.target==alertEl5){
-            alertEl5.style.display='none'
-            bodyEl5.classList.remove('lock-scroll');
-        }
+    // let btn5=document.querySelector('.btn-alert5')
+    // let alertEl5=document.querySelector('.alert5')
+    // let contentEl5 = document.querySelector('.alert-ctt5');
+    // let bodyEl5 = document.body;
+    // btn5.onclick=function(){
+    //     alertEl5.style.display = 'flex';
+    //   bodyEl5.classList.add('lock-scroll');
+    // }
+    // let btnClose5=document.querySelector('.close5')
+    // btnClose5.onclick=function(){
+    //     alertEl5.style.display = 'none';
+    //   bodyEl5.classList.remove('lock-scroll');
+    // }
+    // alertEl5.onclick=function(e){
+    //     console.log(e)
+    //     if(e.target==alertEl5){
+    //         alertEl5.style.display='none'
+    //         bodyEl5.classList.remove('lock-scroll');
+    //     }
 
-    }
+    // }
 
-    let btn6=document.querySelector('.btn-alert6')
-    let alertEl6=document.querySelector('.alert6')
-    let contentEl6 = document.querySelector('.alert-ctt6');
-    let bodyEl6 = document.body;
-    btn6.onclick=function(){
-        alertEl6.style.display = 'flex';
-      bodyEl6.classList.add('lock-scroll');
-    }
-    let btnClose6=document.querySelector('.close6')
-    btnClose6.onclick=function(){
-        alertEl6.style.display = 'none';
-      bodyEl6.classList.remove('lock-scroll');
-    }
-    alertEl6.onclick=function(e){
-        console.log(e)
-        if(e.target==alertEl6){
-            alertEl6.style.display='none'
-            bodyEl6.classList.remove('lock-scroll');
-        }
+    // let btn6=document.querySelector('.btn-alert6')
+    // let alertEl6=document.querySelector('.alert6')
+    // let contentEl6 = document.querySelector('.alert-ctt6');
+    // let bodyEl6 = document.body;
+    // btn6.onclick=function(){
+    //     alertEl6.style.display = 'flex';
+    //   bodyEl6.classList.add('lock-scroll');
+    // }
+    // let btnClose6=document.querySelector('.close6')
+    // btnClose6.onclick=function(){
+    //     alertEl6.style.display = 'none';
+    //   bodyEl6.classList.remove('lock-scroll');
+    // }
+    // alertEl6.onclick=function(e){
+    //     console.log(e)
+    //     if(e.target==alertEl6){
+    //         alertEl6.style.display='none'
+    //         bodyEl6.classList.remove('lock-scroll');
+    //     }
 
-    }
+    // }
 
-    let btn7=document.querySelector('.btn-alert7')
-    let alertEl7=document.querySelector('.alert7')
-    let contentEl7 = document.querySelector('.alert-ctt7');
-    let bodyEl7 = document.body;
-    btn7.onclick=function(){
-        alertEl7.style.display = 'flex';
-      bodyEl7.classList.add('lock-scroll');
-    }
-    let btnClose7=document.querySelector('.close7')
-    btnClose7.onclick=function(){
-        alertEl7.style.display = 'none';
-      bodyEl7.classList.remove('lock-scroll');
-    }
-    alertEl7.onclick=function(e){
-        console.log(e)
-        if(e.target==alertEl7){
-            alertEl7.style.display='none'
-            bodyEl7.classList.remove('lock-scroll');
-        }
+    // let btn7=document.querySelector('.btn-alert7')
+    // let alertEl7=document.querySelector('.alert7')
+    // let contentEl7 = document.querySelector('.alert-ctt7');
+    // let bodyEl7 = document.body;
+    // btn7.onclick=function(){
+    //     alertEl7.style.display = 'flex';
+    //   bodyEl7.classList.add('lock-scroll');
+    // }
+    // let btnClose7=document.querySelector('.close7')
+    // btnClose7.onclick=function(){
+    //     alertEl7.style.display = 'none';
+    //   bodyEl7.classList.remove('lock-scroll');
+    // }
+    // alertEl7.onclick=function(e){
+    //     console.log(e)
+    //     if(e.target==alertEl7){
+    //         alertEl7.style.display='none'
+    //         bodyEl7.classList.remove('lock-scroll');
+    //     }
 
-    }
+    // }
 
-    let btn8=document.querySelector('.btn-alert8')
-    let alertEl8=document.querySelector('.alert8')
-    let contentEl8 = document.querySelector('.alert-ctt8');
-    let bodyEl8 = document.body;
-    btn8.onclick=function(){
-        alertEl8.style.display = 'flex';
-      bodyEl8.classList.add('lock-scroll');
-    }
-    let btnClose8=document.querySelector('.close8')
-    btnClose8.onclick=function(){
-        alertEl8.style.display = 'none';
-      bodyEl8.classList.remove('lock-scroll');
-    }
-    alertEl8.onclick=function(e){
-        console.log(e)
-        if(e.target==alertEl8){
-            alertEl8.style.display='none'
-            bodyEl8.classList.remove('lock-scroll');
-        }
+    // let btn8=document.querySelector('.btn-alert8')
+    // let alertEl8=document.querySelector('.alert8')
+    // let contentEl8 = document.querySelector('.alert-ctt8');
+    // let bodyEl8 = document.body;
+    // btn8.onclick=function(){
+    //     alertEl8.style.display = 'flex';
+    //   bodyEl8.classList.add('lock-scroll');
+    // }
+    // let btnClose8=document.querySelector('.close8')
+    // btnClose8.onclick=function(){
+    //     alertEl8.style.display = 'none';
+    //   bodyEl8.classList.remove('lock-scroll');
+    // }
+    // alertEl8.onclick=function(e){
+    //     console.log(e)
+    //     if(e.target==alertEl8){
+    //         alertEl8.style.display='none'
+    //         bodyEl8.classList.remove('lock-scroll');
+    //     }
 
-    }
+    // }
     // 图片放大
 //     document.addEventListener('DOMContentLoaded', () => {
 //   const images = document.querySelectorAll('.enlargeable-image');
@@ -546,22 +614,69 @@
 //     });
 //   });
 // });
-document.addEventListener('DOMContentLoaded', () => {
-  const imgElement = document.getElementById('fullscreen-img');
-  const fullscreenContainer = document.getElementById('fullscreen-container');
+// ------------------------------------------------------------------------------------------
+// document.addEventListener('DOMContentLoaded', () => {
+//   const imgElement = document.getElementById('fullscreen-img');
+//   const fullscreenContainer = document.getElementById('fullscreen-container');
 
-  imgElement.addEventListener('click', function() {
-    fullscreenContainer.classList.add('fullscreen-active');
-  });
+//   imgElement.addEventListener('click', function() {
+//     fullscreenContainer.classList.add('fullscreen-active');
+//   });
 
-  // 添加退出全屏的逻辑，例如监听 ESC 键或者点击遮罩层
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && fullscreenContainer.classList.contains('fullscreen-active')) {
-      fullscreenContainer.classList.remove('fullscreen-active');
-    }
-  });
-});
+//   // 添加退出全屏的逻辑，例如监听 ESC 键或者点击遮罩层
+//   document.addEventListener('keydown', function(e) {
+//     if (e.key === 'Escape' && fullscreenContainer.classList.contains('fullscreen-active')) {
+//       fullscreenContainer.classList.remove('fullscreen-active');
+//     }
+//   });
+// });
+// ------------------------------------------------------------------------------------------
+// document.addEventListener('DOMContentLoaded', () => {
+//   const fullscreenTriggers = document.querySelectorAll('.fullscreen-trigger');
+//   const fullscreenContainers = document.querySelectorAll('.fullscreen-container');
+//   const closeButton = document.querySelector('.close');
 
+//   fullscreenTriggers.forEach(trigger => {
+//     trigger.addEventListener('click', function() {
+//       const targetId = trigger.getAttribute('data-target');
+//       const targetContainer = document.getElementById(targetId);
+//       if (targetContainer) {
+//         targetContainer.classList.add('fullscreen-active');
+//         closeButton.style.display = 'block'; // 显示关闭按钮
+//       }
+//     });
+//   });
+
+//   // 添加关闭按钮的点击事件
+//   closeButton.addEventListener('click', function() {
+//     fullscreenContainers.forEach(container => {
+//       container.classList.remove('fullscreen-active');
+//     });
+//     closeButton.style.display = 'none'; // 隐藏关闭按钮
+//   });
+
+//   // 添加退出全屏的逻辑，例如监听 ESC 键或者点击遮罩层
+//   document.addEventListener('keydown', function(e) {
+//     if (e.key === 'Escape') {
+//       fullscreenContainers.forEach(container => {
+//         container.classList.remove('fullscreen-active');
+//       });
+//       closeButton.style.display = 'none'; // 隐藏关闭按钮
+//     }
+//   });
+
+//   // 添加滚动事件监听器
+//   window.addEventListener('scroll', function() {
+//     fullscreenContainers.forEach(container => {
+//       if (container.classList.contains('fullscreen-active')) {
+//         container.classList.remove('fullscreen-active');
+//         closeButton.style.display = 'none'; // 隐藏关闭按钮
+//       }
+//     });
+//   });
+// });
+
+// ------------------------------------------------------------------------------------------
     // let btn = document.querySelector('.btn-alert');
     // let alertEl = document.querySelector('.alert');
     // let contentEl = document.querySelector('.alert-ctt');
@@ -573,6 +688,180 @@ document.addEventListener('DOMContentLoaded', () => {
     //     bodyEl.classList.remove('lock-scroll');
     //   }
     // };
+    // 页面加载完成后执行
+// 页面加载完成后执行
+// ----------------------------滑动没效果-----------------------------------------------------------------
+// document.addEventListener('DOMContentLoaded', function() {
+//     let btns = document.querySelectorAll('.btn-alert');
+//     let alerts = document.querySelectorAll('.alert');
+//     let bodyEl = document.body;
+//     let closeButtons = document.querySelectorAll('.close');
+//     let fullscreenTriggers = document.querySelectorAll('.fullscreen-trigger');
+//     let fullscreenContainers = document.querySelectorAll('.fullscreen-container');
+//     let isModalOpen = false; // 标志表示是否有弹窗处于打开状态
+
+//     // 遍历所有的按钮，并为每个按钮添加点击事件监听器
+//     btns.forEach((btn, index) => {
+//         btn.onclick = function() {
+//             alerts[index].style.display = 'flex';
+//             bodyEl.classList.add('lock-scroll');
+//             isModalOpen = true; // 设置标志为true，表示弹窗处于打开状态
+//         }
+//     });
+
+//     // 遍历所有的关闭按钮，并为每个按钮添加点击事件监听器
+//     closeButtons.forEach((closeButton, index) => {
+//         closeButton.onclick = function() {
+//             alerts[index].style.display = 'none';
+//             bodyEl.classList.remove('lock-scroll');
+//             isModalOpen = false; // 设置标志为false，表示弹窗已关闭
+//         }
+//     });
+
+//     // 遍历所有的全屏触发按钮，并为每个按钮添加点击事件监听器
+//     fullscreenTriggers.forEach(trigger => {
+//         trigger.addEventListener('click', function() {
+//             const targetId = trigger.getAttribute('data-target');
+//             const targetContainer = document.getElementById(targetId);
+//             if (targetContainer) {
+//                 targetContainer.classList.add('fullscreen-active');
+//                 closeButtons.forEach(closeButton => {
+//                     closeButton.style.display = 'block';
+//                 });
+//                 isModalOpen = true; // 设置标志为true，表示弹窗处于打开状态
+//             }
+//         });
+//     });
+
+//     // 添加主页面滚动事件监听器
+//     window.addEventListener('scroll', function(event) {
+//         if (isModalOpen) {
+//             event.preventDefault(); // 阻止默认滚动行为
+//             event.stopPropagation(); // 阻止事件冒泡到父元素
+//         }
+//     });
+// });
+// --------------------------------------------------------------------------------
+// 页面加载完成后执行
+// console.log("Script loaded.");
+// document.addEventListener('DOMContentLoaded', function() {
+//   console.log("DOMContentLoaded event triggered."); // 检查DOMContentLoaded事件是否触发
+//     let btns = document.querySelectorAll('.btn-alert');
+//     let alerts = document.querySelectorAll('.alert');
+//     let bodyEl = document.body;
+//     let closeButtons = document.querySelectorAll('.close');
+//     let fullscreenTriggers = document.querySelectorAll('.fullscreen-trigger');
+//     let fullscreenContainers = document.querySelectorAll('.fullscreen-container');
+//     let isModalOpen = false; // 标志表示是否有弹窗处于打开状态
+
+//     // 遍历所有的按钮，并为每个按钮添加点击事件监听器
+//     btns.forEach((btn, index) => {
+//         btn.onclick = function() {
+//             alerts[index].style.display = 'flex';
+//             bodyEl.classList.add('lock-scroll');
+//             isModalOpen = true; // 设置标志为true，表示弹窗处于打开状态
+//         }
+//     });
+
+//     // 遍历所有的关闭按钮，并为每个按钮添加点击事件监听器
+//     closeButtons.forEach((closeButton, index) => {
+//         closeButton.onclick = function() {
+//             alerts[index].style.display = 'none';
+//             bodyEl.classList.remove('lock-scroll');
+//             isModalOpen = false; // 设置标志为false，表示弹窗已关闭
+//         }
+//     });
+
+//     // 遍历所有的全屏触发按钮，并为每个按钮添加点击事件监听器
+//     fullscreenTriggers.forEach(trigger => {
+//         trigger.addEventListener('click', function() {
+//             const targetId = trigger.getAttribute('data-target');
+//             const targetContainer = document.getElementById(targetId);
+//             if (targetContainer) {
+//                 targetContainer.classList.add('fullscreen-active');
+//                 closeButtons.forEach(closeButton => {
+//                     closeButton.style.display = 'block';
+//                 });
+//                 isModalOpen = true; // 设置标志为true，表示弹窗处于打开状态
+//             }
+//         });
+//     });
+
+//     // 添加主页面滚动事件监听器
+//     window.addEventListener('scroll', function(event) {
+//       console.log("Scroll event triggered."); // 检查滚动事件是否被触发
+//         if (isModalOpen) {
+//             event.preventDefault(); // 阻止默认滚动行为
+//             event.stopPropagation(); // 阻止事件冒泡到父元素
+//         }
+//     });
+
+//     // 添加弹窗内容滚动事件监听器
+//     alerts.forEach(alert => {
+//         alert.addEventListener('scroll', function(event) {
+//             // 在此处理滚动事件
+//         console.log("Scroll event inside alert triggered.");
+//             event.stopPropagation(); // 阻止事件冒泡到父元素
+//         });
+//     });
+    
+//     btns.forEach((btn, index) => {
+//     btn.onclick = function() {
+//         console.log("Button clicked:", index); // 检查按钮点击事件是否触发
+//         alerts[index].style.display = 'flex';
+//         bodyEl.classList.add('lock-scroll');
+//         isModalOpen = true; // 设置标志为true，表示弹窗处于打开状态
+//     }
+// });
+
+// });
+// =====================================================================
+document.addEventListener('DOMContentLoaded', function() {
+    let btns = document.querySelectorAll('.btn-alert');
+    let alerts = document.querySelectorAll('.alert');
+    let bodyEl = document.body;
+    let closeButtons = document.querySelectorAll('.close');
+    let lastScrollTop = 0;
+
+    // 遍历所有的按钮，并为每个按钮添加点击事件监听器
+    btns.forEach((btn, index) => {
+        btn.onclick = function() {
+            alerts[index].style.display = 'flex';
+            bodyEl.classList.add('lock-scroll');
+            // 显示关闭按钮
+            closeButtons[index].style.display = 'block';
+        }
+    });
+
+    // 遍历所有的关闭按钮，并为每个按钮添加点击事件监听器
+    closeButtons.forEach((closeButton, index) => {
+        closeButton.onclick = function() {
+            alerts[index].style.display = 'none';
+            bodyEl.classList.remove('lock-scroll');
+            // 隐藏关闭按钮
+            closeButton.style.display = 'none';
+        }
+    });
+
+    // 页面滚动事件监听器
+    window.addEventListener('scroll', function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            closeButtons.forEach(closeButton => {
+                closeButton.style.display = 'none'; // 向下滑动时隐藏关闭按钮
+            });
+        } else {
+            // Scrolling up
+            closeButtons.forEach(closeButton => {
+                closeButton.style.display = 'block'; // 向上滑动时显示关闭按钮
+            });
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+});
+
+
   </script>
 </body>
 
