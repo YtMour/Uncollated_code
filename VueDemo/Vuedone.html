@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="demo.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- {{msg}}
+      <p>{{age >=18 ? '1' : '2' }}</p>
+      <p>{{feiend.name}}</p>
+      <p>{{feiend.age}}</p>
+
+      <div v-html="alj"></div></div> -->
+
+      <!-- show和if区别   
+show  切换css中的disply：none 控制隐藏     适用频繁使用场景
+if  根据判断条件 控制元素的 创建 和 移除  （渲染）
+-->
+      <!-- <div class="d" v-show="flag">v-show</div>
+      <div class="d" v-if="flag">v-if</div> -->
+
+      <!-- <p v-if="gender==2">性别：男</p>
+      <p v-else>性别：女</p>
+      <hr />
+      <p v-if="score>=10">评定A: 10</p>
+      <p v-else-if="score>=8">评定B: 8</p>
+      <p v-else-if="score>=6">评定C: 6</p>
+      <p v-else-if="score>=4">评定D: 4</p>
+      <p v-else>评定E: 0</p> -->
+
+      <!-- v-on 事件绑定  v-on:  可缩写  @  --><!-- 鼠标划入事件 mouseenter -->
+      <!-- <button @click="count--">-</button>
+      <span>{{count}}</span>
+      <button @click="count++">+</button> -->
+      <!-- 点击调用fn函数  -->
+      <!-- <button @click="fn">切换显示或隐藏</button></button>
+      <p v-show="isShow">123456</p> -->
+      <!-- 参数传递 -->
+      <!-- <button @click="fn()"> -->
+      <!-- <div class="d">
+          <p>售货机</p>
+          <hr></hr>
+          <button @click="buy(5)">可乐5元</button>
+          <button @click="buy(10)">快乐水10元</button>
+        </div>
+        <p>余额：{{money}} 元</p> -->
+
+      <!-- v-bind:src  可缩写为   :src  -->
+      <!-- <img :src="imgUrl" :title="ttle" alt="" /> -->
+      <!-- 图片切换 -->
+      <!-- <button v-show="index>0" @click="index--">上一张</button>
+      <div>
+        <img :src="list[index]" alt="" />
+      </div>
+      <button v-show="index<list.length - 1" @click="index++">下一张</button> -->
+
+      <!-- v-for 循环渲染 -->
+      <!-- <ul>
+      <li v-for="(item,index) in list">
+        {{item}} - {{index}}
+      </li>
+      <hr></hr>
+      <li v-for="item in list">
+        {{item}}
+      </li> -->
+      <!-- 书架 包含删除   v-for绑定key -->
+      <!-- <ul>
+        <li v-for="item in booksList">
+          <span>{{item.name}}</span>
+          <span>{{item.author}}</span> -->
+      <!-- key 唯一，   修改 与 删除 的区别 -->
+      <!-- <button @click="del(item.id)" :key="item.id">删除</button>
+        </li>
+      </ul> -->
+
+      <!-- v-model 表单元素  双向数据绑定  快速 获取 或 设置 表单元素内容
+        (1)数据变化，视图自动更新
+        （2）视图变化，数据制动更新
+      -->
+      账户：<input type="text" v-model="username"></input><br><br>
+      密码：<input type="password" v-model="password"></input><br><br>
+      <button @click="login">登录</button>
+      <button @click="reset">重置</button>
+
+      <!-- 底部 -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+
+        data: {
+          //提供数据
+          // msg: "Hello Vue!",
+          // age: 18,
+          // feiend: {
+          //   name: "辛普森",
+          //   age: 18,
+          // },
+          // alj: `
+          // <a href="#">按时发放</a>
+          // `,
+          // v-show  v-if实例
+          // flag: true,
+          // flag: false,
+          // gender: 1,
+          // score: 10,
+          // v-on
+          // count: 100,
+          // isShow: true,
+          // money: 100,
+          // imgUrl: "./img/20.jpg",
+          // ttle: "hi",
+          // 数组  切换图片
+          // index: 0,
+          // list: [
+          //   "./img/20.jpg",
+          //   "./img/21.jpg",
+          //   "./img/22.jpg",
+          //   "./img/23.jpg",
+          //   "./img/24.jpg",
+          // ],
+          // list:['西瓜','榴莲','苹果','香蕉']
+          // booksList: [
+          //   { id: 1, name: "《红楼梦》", author: "曹雪芹" },
+          //   { id: 2, name: "《西游记》", author: "吴承恩" },
+          //   { id: 3, name: "《水浒传》", author: "施耐庵" },
+          //   { id: 4, name: "《三国演义》", author: "罗贯中" },
+          // ],
+
+          username:'',
+          password:'',
+        },
+
+        methods: {
+          //提供处理逻辑
+          // 让提供的所有methods中的函数，this都指向当前实例
+          // fn(a, b) {
+          //   // console.log('执行fn函数');
+          //   // app.isShow =!app.isShow
+          //   this.isShow = !this.isShow;
+          // },
+          // buy(a) {
+          //   this.money -= a;
+          // },
+          // del(id) {
+          //   // console.log("删除");
+          //   // filter方法，删除不会改变原数据，存储为新数组，需重新赋值到原数组
+          //   this.booksList = this.booksList.filter((item) => item.id !== id);
+          // },
+          login(){
+              console.log(this.username,this.password);
+          },
+          reset(){
+            this.username=''
+            this.password=''
+          },
+        },
+
+        //
+      });
+    </script>
+  </body>
+</html>
