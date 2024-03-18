@@ -102,7 +102,7 @@
                 <td :class="{ red: item.price > 500 }">
                   {{ item.price.toFixed(2) }}
                 </td>
-                <td><a @click="del(item.id)" href="javascript:;">删除</a></td>
+                <td><a href="javascript:;">删除</a></td>
               </tr>
             </tbody>
             <tfoot>
@@ -136,9 +136,6 @@
        *    (2) 给添加按钮注册点击事件，发送添加请求
        *    (3) 需要重新渲染
        * 3. 删除功能
-       *    (1) 注册点击事件，传参传 id
-       *    (2) 根据 id 发送删除请求
-       *    (3) 需要重新渲染
        * 4. 饼图渲染
        */
       const app = new Vue({
@@ -154,69 +151,26 @@
           },
         },
         created() {
+          // const res = await axios.get('https://applet-base-api-t.itheima.net/bill', {
+          //   params: {
+          //     creator: '小黑'
+          //   }
+          // })
+          // this.list = res.data.data
+
           this.getList();
         },
-        //
-        mounted() {
-          this.myChart = echarts.init(document.querySelector("#main"));
-          this.myChart.setOption({
-            title: {
-              text: "清单",
-              // subtext: "子标题",
-              left: "center",
-            },
-            // 提示框
-            tooltip: {
-              trigger: "item",
-            },
-            // 图例
-            legend: {
-              orient: "vertical",
-              left: "left",
-            },
-            // 数据项
-            series: [
-              {
-                name: "账单",
-                type: "pie",
-                radius: "50%",
-                data: [
-                  // { value: 1048, name: "Search Engine" },
-                ],
-                emphasis: {
-                  itemStyle: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: "rgba(0, 0, 0, 0.5)",
-                  },
-                },
-              },
-            ],
-          });
-        },
-        //
         methods: {
           async getList() {
             const res = await axios.get(
               "https://applet-base-api-t.itheima.net/bill",
               {
                 params: {
-                  creator: "YT",
+                  creator: "小黑",
                 },
               }
             );
             this.list = res.data.data;
-            // 更新图表
-            this.myChart.setOption({
-              series: [
-                {
-                  data: this.list.map((item) => ({
-                    value: item.price,
-                    name: item.name,
-                  })),
-                },
-              ],
-            });
           },
           async add() {
             if (!this.name) {
@@ -232,7 +186,7 @@
             const res = await axios.post(
               "https://applet-base-api-t.itheima.net/bill",
               {
-                creator: "YT",
+                creator: "小黑",
                 name: this.name,
                 price: this.price,
               }
@@ -242,14 +196,6 @@
 
             this.name = "";
             this.price = "";
-          },
-          async del(id) {
-            // 根据 id 发送删除请求
-            const res = await axios.delete(
-              `https://applet-base-api-t.itheima.net/bill/${id}`
-            );
-            // 重新渲染
-            this.getList();
           },
         },
       });
