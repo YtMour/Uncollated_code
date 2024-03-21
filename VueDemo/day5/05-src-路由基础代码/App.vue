@@ -1,13 +1,12 @@
 <template>
   <div>
     <div class="footer_wrap">
-      <a href="#/find">发现音乐</a>
-      <a href="#/my">我的音乐</a>
-      <a href="#/friend">朋友</a>
+      <a href="javascript:;">发现音乐</a>
+      <a href="javascript:;">我的音乐</a>
+      <a href="javascript:;">朋友</a>
     </div>
     <div class="top">
-      <!-- 路由出口 -> 匹配的组件所展示的位置-->
-      <router-view></router-view>
+      
     </div>
   </div>
 </template>
